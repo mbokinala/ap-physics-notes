@@ -38,14 +38,14 @@
 \usepackage{tgpagella}
 \renewcommand{\familydefault}{\sfdefault}
 
-\title{AP Physics C: Mechanics - Semester 1 Notes}
+\title{AP Physics C: Mechanics - Notes}
 \author{Manav Bokinala}
 \date{Fall 2021}
 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{Manav Bokinala}
-\fancyhead[RE,LO]{AP Physics C: Mechanics - Semester 1 Notes}
+\fancyhead[RE,LO]{AP Physics C: Mechanics -  Lecture Notes}
 \fancyfoot[LE,RO]{\thepage}
 
 \begin{document}
@@ -392,8 +392,8 @@ The same object can have different rotational inertias depending on the location
         \hline
         Thin rod, about center               & $\frac{1}{12}ML^2$          \\
         Thin rod, about end                  & $\frac{1}{3}ML^2$           \\
-        Cylinder or disk, about center       & $\frac{1}{2} MR^2$        \\
-        Cylindrical hoop, about edge       & $MR^2$
+        Cylinder or disk, about center       & $\frac{1}{2} MR^2$          \\
+        Cylindrical hoop, about edge         & $MR^2$
     \end{tabular}
 \end{table}
 
@@ -449,10 +449,47 @@ Use the right hand rule to find the direction of torque:
 
 \subsection{Torque in Newton's Second Law}
 \begin{align*}
-    \tau_{net} &= R \cross F \\
-    &= R F_{net} \\
-    &= Rma && \text{Newton's 2nd Law, } F = ma\\
-    &= Rm \alpha R && a = \alpha R\\
-    &= I \alpha && \text{rotational inertia, } I = mR^2
+    \tau_{net} & = R \cross F                                            \\
+               & = R F_{net}                                             \\
+               & = Rma         &  & \text{Newton's 2nd Law, } F = ma     \\
+               & = Rm \alpha R &  & a = \alpha R                         \\
+               & = I \alpha    &  & \text{rotational inertia, } I = mR^2
 \end{align*}
+
+\section{Rolling}
+Friction causes a torque that makes objects roll. Rolling objects experience both \textbf{rotational} and \textbf{translational} motion.
+
+Objects can roll with or without \textbf{slipping}
+
+\subsection{Rolling Without Slipping}
+When an object rolls without slipping,
+\begin{align*}
+    v_{cm} = \omega R \\
+    a_cm = \alpha R
+\end{align*}
+
+\begin{itemize}
+    \item $v_{cm}$ and $a_{cm}$ are the velocities and accelerations of the center of mass, respectively
+    \item $\omega$ and $\alpha$ are the angular velocity and acceleration of the object, respectively
+    \item $R$ is the distance from the axis of rotation to the point of contact with the ground
+\end{itemize}
+
+Rolling without slipping problems are solved by relating the rotational and translational motions of an object using the equation $a = R\alpha$
+
+\subsection{Rolling With Slipping}
+When an object rolls without slipping,
+\begin{align*}
+    v_{cm} \neq \omega R \\
+    a_{cm} \neq \alpha R
+\end{align*}
+
+Rolling without slipping problems are solved by figuring out \textbf{when} $v = R \omega$ (the object enters into rolling without slipping)
+
+\subsubsection{Two Types of Rolling Without Slipping}
+\begin{enumerate}
+    \item $v_{cm} > \omega R$ - object is sliding around ground at some points (e.g. bowling ball sliding and rolling slightly before it 'catches grip' and rolls at full speed)
+    \item $v_{cm} < \omega R$ - object is spinning more than one revolution in the time it takes to advance by one circumference (e.g. car doing burnouts or losing traction)
+\end{enumerate}
+
+
 \end{document}
