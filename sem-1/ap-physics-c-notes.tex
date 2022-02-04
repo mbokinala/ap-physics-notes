@@ -313,7 +313,7 @@ $\alpha$ does \textbf{\emph{not}} point in the direction of rotation - same as a
 \end{itemize}
 
 \subsection{Position of the Center of Mass}
-\[x_cm = \frac{1}{M}\sum m_i x_i\]
+\[x_{cm} = \frac{1}{M}\sum m_i x_i\]
 
 \begin{itemize}
     \item $x_cm$ = position of the center of mass of the systeme
@@ -491,5 +491,135 @@ Rolling without slipping problems are solved by figuring out \textbf{when} $v = 
     \item $v_{cm} < \omega R$ - object is spinning more than one revolution in the time it takes to advance by one circumference (e.g. car doing burnouts or losing traction)
 \end{enumerate}
 
+\section{Work and Energy}
+\begin{itemize}
+    \item energy is a scalar quantity (has no direction), but can be positive or negative'
+    \item energy is always conserved in a closed system
+\end{itemize}
+
+\subsection{Work}
+Work is the result of a force being applied to move an object across a displacement - measured in $N \cdot m$
+\begin{equation*}
+    W = F \cdot \Delta x = F \Delta x \cos \theta
+\end{equation*}
+\begin{itemize}
+    \item work is the \textbf{cross product} of force and displacement (vector quantity)
+    \item $\theta$ is the angle between $F$ and $\Delta x$ when aligned tail to tail
+\end{itemize}
+
+\subsubsection{Work-Energy Theorem}
+Work changes the energy of an object
+\begin{equation*}
+    \Sigma W = \Delta KE
+\end{equation*}
+\begin{itemize}
+    \item net work is equal to the change in kinetic energy of an object
+\end{itemize}
+
+\subsection{Energy}
+Energy is measured in Joules ($J$) - equal to ($N \cdot m$)
+\subsubsection{Types of Mechanical Energy}
+
+\textbf{Kinetic Energy}
+\begin{equation*}
+    KE = \frac{1}{2}mv^2
+\end{equation*}
+
+\textbf{Potential Energy} \\
+\emph{Gravitational}
+\begin{equation*}
+    GPE = mgh
+\end{equation*}
+
+\emph{Elastic}
+\begin{equation*}
+    EPE = \frac{1}{2}k (\Delta s)^2
+\end{equation*}
+\begin{itemize}
+    \item $k$ - spring constant 
+    \item $\Delta s$ - displacement of the spring (compression or extension)
+\end{itemize}
+
+\subsection{Power}
+power is energy delivered over a period of time
+
+\begin{equation*}
+    P = \frac{\Delta E}{\Delta t} = \frac{W}{\Delta t} = \frac{F \Delta x}{\Delta t} = Fv
+\end{equation*}
+
+\section{Impulse and Momentum}
+\textbf{impulse} is a force applied for a period of time
+
+symbol: $J$ \\
+units: $N \cdot s$\\
+vector quantity - same direction as force
+
+\begin{equation*}
+    J = F \Delta t
+\end{equation*}
+
+\textbf{momentum} is the amount of motion of an object
+
+symbol: $p$\\
+units: $kg \cdot m/s$\\
+vector quantity
+
+\begin{equation*}
+    p = mv
+\end{equation*}
+
+\subsection{Conservation of Momentum}
+Impulse is a change in momentum
+
+\begin{align*}
+    J = \Delta P \\ 
+    \Delta p_B = -\Delta p_A \\
+    \Delta p_A + \Delta p_B = 0
+\end{align*}
+
+When no outside forces act on a system, momentum is conserved (the net change in momentum is 0)
+
+\subsection{Collision Types}
+\subsubsection{Elastic Collisions}
+\begin{itemize}
+    \item energy is consevered
+    \item objects bounce off each other
+\end{itemize}
+
+\subsubsection{Inelastic Collisions}
+\begin{itemize}
+    \item energy is NOT conserved
+    \item objects bounce off each other
+\end{itemize}
+
+\subsubsection{Perfectly Inelastic Collisions}
+\begin{itemize}
+    \item energy is NOT conserved
+    \item objects stick to each other
+\end{itemize}
+
+\subsection{Useful Equations}
+\subsubsection{Head-on Elastic Collision}
+\begin{equation*}
+    v_{1_0} + v_{1_f} = v_{2_0} + v_{2_f}
+\end{equation*}
+
+\subsubsection{Perfectly Inelastic Ballistic Collission}
+When a projectile strikes a block on a pendulum,
+\begin{equation*}
+    v_0 = \frac{m + M}{m}\sqrt{2gh}
+\end{equation*}
+where
+\begin{itemize}
+    \item $v_0$ - initial velocity of the bullet
+    \item $m$ - mass of the projectile
+    \item $M$ - mass of the block
+    \item $h$ - max height of the pendulum
+\end{itemize}
+
+\subsection{Calculus with Momentum and Impulse}
+\begin{equation*}
+    \int F(t) dt = J
+\end{equation*}
 
 \end{document}
