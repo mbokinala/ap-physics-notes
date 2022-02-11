@@ -566,9 +566,10 @@ symbol: $J$ \\
 units: $N \cdot s$\\
 vector quantity - same direction as force
 
-\begin{equation*}
-    J = F \Delta t
-\end{equation*}
+\begin{align*}
+    J &= F \Delta t \\
+    J &= \int_{t_0}^{t_1} F(t) dt
+\end{align*}
 
 \textbf{momentum} is the amount of motion of an object
 
@@ -583,10 +584,11 @@ vector quantity
 \subsection{Conservation of Momentum}
 Impulse is a change in momentum
 
+Where A and B are two objects in a system upon which no outside forces act,
 \begin{align*}
-    J = \Delta P \\ 
-    \Delta p_B = -\Delta p_A \\
-    \Delta p_A + \Delta p_B = 0
+    J &= \Delta p \\ 
+    \Delta p_B &= -\Delta p_A \\
+    \Delta p_A &+ \Delta p_B = 0
 \end{align*}
 
 When no outside forces act on a system, momentum is conserved (the net change in momentum is 0)
@@ -632,6 +634,43 @@ where
 \subsection{Calculus with Momentum and Impulse}
 \begin{equation*}
     \int F(t) dt = J
+\end{equation*}
+
+\section{Angular Impulse and Momentum}
+\subsection{Angular Momentum}
+\textbf{angular momentum} is the amount of angular motion an obect has
+
+symbol: $L$\\
+units: $kg \cdot m^2 / s$\\
+"pseudo-vector" quantity (like torque)
+
+\begin{equation*}
+    L = I \omega = \vec{R} \cross \vec{p} = Rp \sin \theta
+\end{equation*}
+
+\begin{itemize}
+    \item $I$ - moment of inertia
+    \item $\omega$ - angular velocity
+    \item $\vec{R}$ - vector from aribtrary center of rotation to object
+    \item $\vec{p}$ - linear momentum vector
+    \item $\theta$ - angle between $R$ and $p$ (tip to tail)
+\end{itemize}
+
+NOTE: because any point can be chosen as the center of rotation, point particles can have an angular momentum
+
+\subsection{Angular Impulse}
+\textbf{angular impulse} is a torque applied for a period of time
+
+symbol: $\Delta L$\\
+units: $kg \cdot m^2 / s$\\
+"pseudo-vector" quantity
+\begin{equation*}
+    \Delta L = \tau_{net} \Delta t
+\end{equation*}
+
+\subsubsection{Newton's Third Law from Angular Impulse}
+\begin{equation*}
+    \tau_{net} = \frac{dL}{dt} = I\alpha
 \end{equation*}
 
 \end{document}
