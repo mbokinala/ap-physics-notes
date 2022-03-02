@@ -33,6 +33,9 @@
 
 % \setlength{\parindent}{0pt}
 
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
 \usepackage{gensymb}
 
 \usepackage{tgpagella}
@@ -525,6 +528,11 @@ Energy is measured in Joules ($J$) - equal to ($N \cdot m$)
     KE = \frac{1}{2}mv^2
 \end{equation*}
 
+\textbf{Rotational Kinetic Energy}
+\begin{equation*}
+    RKE = \frac{1}{2} I \omega ^ 2
+\end{equation*}
+
 \textbf{Potential Energy} \\
 \emph{Gravitational}
 \begin{equation*}
@@ -536,7 +544,7 @@ Energy is measured in Joules ($J$) - equal to ($N \cdot m$)
     EPE = \frac{1}{2}k (\Delta s)^2
 \end{equation*}
 \begin{itemize}
-    \item $k$ - spring constant 
+    \item $k$ - spring constant
     \item $\Delta s$ - displacement of the spring (compression or extension)
 \end{itemize}
 
@@ -567,8 +575,8 @@ units: $N \cdot s$\\
 vector quantity - same direction as force
 
 \begin{align*}
-    J &= F \Delta t \\
-    J &= \int_{t_0}^{t_1} F(t) dt
+    J & = F \Delta t               \\
+    J & = \int_{t_0}^{t_1} F(t) dt
 \end{align*}
 
 \textbf{momentum} is the amount of motion of an object
@@ -586,9 +594,9 @@ Impulse is a change in momentum
 
 Where A and B are two objects in a system upon which no outside forces act,
 \begin{align*}
-    J &= \Delta p \\ 
-    \Delta p_B &= -\Delta p_A \\
-    \Delta p_A &+ \Delta p_B = 0
+    J          & = \Delta p       \\
+    \Delta p_B & = -\Delta p_A    \\
+    \Delta p_A & + \Delta p_B = 0
 \end{align*}
 
 When no outside forces act on a system, momentum is conserved (the net change in momentum is 0)
@@ -673,4 +681,139 @@ units: $N \cdot m \cdot s$\\
     \tau_{net} = \frac{dL}{dt} = I\alpha
 \end{equation*}
 
+\section{Simple Harmonic Motion}
+\begin{itemize}
+    \item \textbf{periodic motion} is cyclic motion that repeats the same path in the same amount of time
+    \item the \textbf{equilibrium position} is the position where the net force on the object is 0
+    \item the \textbf{restoring force} is the force that acts opposite to displacement to bring the object back to the equilibrium position
+    \item \textbf{displacement} is the position relative to the equilibrium position (measured in meters)
+    \item \textbf{amplitude} is the maximum displacement of an object in periodic motion
+    \item a \textbf{cycle} is a complete back and forth swing of the pendulum
+    \item the \textbf{period} is the time it takes to complete one cycle
+    \item the \textbf{frequency} is the number of cycles completed in a second (inverse of period)
+\end{itemize}
+
+\textbf{simple harmonic motion} occurs when the the restoring force is in the \emph{opposite direction} of, and has a magnitude \emph{proportional to} the displacement
+
+All simple harmonic oscillators have an \textbf{angular velocity}. The period of the oscillator is given by
+\begin{equation*}
+    T = 2 \pi \sqrt{\frac{1}{\omega ^ 2}}
+\end{equation*}
+
+For all simple harmonic oscillators, 
+\begin{equation*}
+    a = \frac{d^2 x}{dt^2} = - \omega^2 x
+\end{equation*}
+
+\subsection{Simple Pendulums}
+For a pendulum, the restoring force is gravity and $x = \theta L$
+
+The restoring force of a pendulum is given by
+\begin{equation*}
+    F_{r} = -mg \sin \theta
+\end{equation*}
+
+where $\theta$ is the angular displacement of the Pendulum
+
+For small values of $\theta$ (less than 20\textdegree), $\sin \theta \approx \theta$, so
+\begin{equation*}
+    F_r = -mg \theta
+\end{equation*}
+
+For a pendulum,
+\begin{align*}
+    F                  & = -mg \theta       \\
+    ma                 & = -\frac{mg}{L}{x} \\
+    \frac{d^2 x}{dt^2} & = -\frac{g}{L}x
+\end{align*}
+
+There are three possible solutions to the differential equation above, depending on the starting position of the pendulum
+
+\begin{table}[H]
+    \centering
+    \makegapedcells
+    \begin{tabular}{c|c}
+        {initial position} & \textbf{$x(t)$}                   \\
+        \hline
+        $x_0 = 0$          & $x(t) = A(\sin{\omega t})$        \\
+        $x = A$            & $x(t) = A(\cos{\omega t})$        \\
+        $x = \theta_i L$   & $x(t) = A(\cos{\omega t + \phi})$ \\
+    \end{tabular}
+\end{table}
+
+For a pendulum, the angular velocity is given by
+
+\begin{equation*}
+    \omega^2 = -\frac{g}{L}
+\end{equation*}
+
+\subsection{Spring Mass Systems}
+The period of a spring mass system is given by
+\begin{equation*}
+    T = 2 \pi \sqrt{\frac{m}{k}}
+\end{equation*}
+
+The angular velocity is given by
+\begin{equation*}
+    \omega ^ 2 = \frac{k}{m}
+\end{equation*}
+
+\subsubsection{Vertical Springs}
+If a spring stretches a distance of $\Delta L$ from its unstretched length when a mass is added to it,
+\begin{equation*}
+    \Delta L = \frac{mg}{k}
+\end{equation*}
+
+\subsubsection{Useful Equations for Spring Mass Systems}
+\begin{align*}
+    v_{max} &= A \sqrt{\frac{k}{m}} \\
+    v(x) &= \pm v_{max} \sqrt{1 - \frac{x^2}{A^2}}
+\end{align*}
+
+\subsubsection{Multi Spring Systems}
+When multiple springs are connected, they can be thought of as a single \textbf{equivalent spring} with a unique spring constant.
+
+\paragraph{Springs in Parallel}
+Springs are considered to be connected \textbf{in parallel} if they are \emph{both connected to an object} and \emph{not connected to each other}. Springs in parallel act as a single \textbf{more effective} spring. For springs in parallel,
+\begin{equation*}
+    k_{equiv} = k_1 + k_2 + \cdots
+\end{equation*}
+
+\paragraph{Springs in Series}
+Springs are considered to be connected \textbf{in series} if they are \emph{connected to each other} and \emph{only one of the springs is connected to an object}. Springs in series act as a single \textbf{less effective} spring. For springs in series,
+\begin{equation*}
+    \frac{1}{k_{equiv}} = \frac{1}{k_1} + \frac{1}{k_2} + \cdots
+\end{equation*}
+
+\subsection{Physical Pendulums}
+A physical pendulum is a \emph{rigid} extended body that rotates cyclically about a point
+
+For a physical pendulum,
+\begin{equation*}
+    \frac{d^2 \theta}{dt^2} = \frac{mg R_{cm}}{I}
+\end{equation*}
+\begin{itemize}
+    \item $R_{cm}$ is the distance from the center of mass of the pendulum to the axis of rotation
+    \item $I$ is the rotational inertia of the pendulum
+\end{itemize}
+
+The angular velocity of a physical pendulum is given by
+\begin{equation*}
+    \omega ^ 2 = \frac{mg R_{cm}}{I}
+\end{equation*}
+
+The period of a physical pendulum is given by
+\begin{equation*}
+    T = 2 \pi \sqrt{\frac{I}{mg R_{cm}}}
+\end{equation*}
+
+\subsection{Energy Transfer in Simple Harmonic Motion}
+The total mechanical energy of a simple harmonic oscillator is always constant
+
+At \emph{equilibrium}, the kinetic energy (and therefore velocity) is at a \emph{maximum} and the potential energy is at a \emph{minimum} (therefore net force and acceleration are 0)
+
+At the \emph{amplitude}, the kinetic energy (and therefore velocity) is 0 and the potential energy (and therefore net force and acceleration) is at a \emph{maximum}
+
+\subsection{Resonance}
+When a force is applied to an object with a frequency close to the natural frequency (aka resonant frequency) of the object, the amplitude of the oscillation (and therefore the total energy in the system) increases.
 \end{document}
