@@ -41,6 +41,8 @@
 \usepackage{tgpagella}
 \renewcommand{\familydefault}{\sfdefault}
 
+\graphicspath{{images/}}
+
 \title{AP Physics C: Mechanics - Notes}
 \author{Manav Bokinala}
 \date{2021 - 2022}
@@ -341,7 +343,7 @@ Newton's third law ($F = ma$) actually refers to the center of mass of a system 
 \section{Center of Mass (Continuous Objects)}
 Not all continuous objects have a uniform mass density
 \begin{itemize}
-    \item Mass density usually varies withlocation
+    \item Mass density usually varies with location
 \end{itemize}
 
 \[x_{cm} = \frac{1}{M} \int x \ dm\]
@@ -830,4 +832,73 @@ When a force is applied to an object with a frequency close to the natural frequ
         {physical pendulum} & $\omega^2 = \dfrac{mg R_{cm}}{I}$ & $T = 2 \pi \sqrt{\dfrac{I}{mg R_{cm}}}$
     \end{tabular}
 \end{table}
+
+\section{Kepler's Laws and Universal Gravitation}
+Newton's law of universal gravitation:
+\begin{equation*}
+    F_g = G\frac{m_1 m_2}{r^2}
+\end{equation*}
+
+\begin{itemize}
+    \item $G$ - universal gravtiational constant ($6.67 \times 10^{-11} \frac{N \cdot m^2}{{kg}^2}$)
+    \item $r$ - separation distance (distance between centers of mass of the two objects)
+\end{itemize}
+
+\subsection{Satellite Motion}
+\textbf{Note:} in satellite motion $M$ is used to denote the mass of the planet and $m$ is used to denote the mass of the satellite. It is assumed that $M \gg m$
+
+The motion of a satellite is approximated as circular motion. Therefore,
+
+\begin{align*}
+    F_c = F_g \\
+    v = \sqrt{\frac{GM}{r}} \\
+    T = 2 \pi \sqrt{\frac{r^3}{GM}}
+\end{align*}
+
+\subsection{Potential Energy of Orbits}
+\begin{equation*}
+    U_g = -G \frac{Mm}{r}
+\end{equation*}
+
+The negative sign is important! It defines the system such that an object has 0 gravitational potential energy at an infinite distance from another object ($r = \infty$).
+
+\subsection{Work of Separation}
+The work needed to separate two gravitationally attracted objects is given by
+\begin{align*}
+    W_{conservative} = -\Delta U_g \\
+    W = -GMm \left( \frac{1}{r_f} - \frac{1}{r_i} \right)
+\end{align*}
+
+where $r_f$ and $r_i$ are the final and initial separation distances (from the centers of mass of the objects), respectively.
+
+\subsubsection{Total Energy of Objects in Orbit}
+\begin{align*}
+    E_{total} &= \frac{1}{2} mv^2 - \frac{GMm}{r} \\
+    E_{total} &= - \frac{GMm}{2r}
+\end{align*}
+
+\textbf{Note:} if an orbit is said to be "geosynchronous," it's period is 24 hours.
+
+\subsubsection{Escape Velocity}
+\textbf{Escape velocity} is the velocity needed to prevent an object from returning into an orbit.
+
+The object much reach an infinite distance away from the planet (so that potential energy is 0).
+
+Because potential energy is negative, a satellite has \textbf{0} total energy at escape velocity.
+
+\begin{equation*}
+    v_{esc} = \sqrt{\frac{2GM}{r}}
+\end{equation*}
+
+\subsubsection*{Kepler's Laws}
+\begin{enumerate}
+    \item Each planet's orbit as an \textbf{ellipse} with the sun at one of the \textbf{foci}
+    \item Every planet sweeps an equal area of space in an equal amount of time. \\
+    \includegraphics[scale=0.2]{kepler2}
+    \item For two planets orbiting around the same sun, $\left( \dfrac{T_1}{T_2} \right)^2 = \left( \dfrac{r_1}{r_2} \right)^3 $
+\end{enumerate}
+
+\subsubsection{Period and Energy of Elliptical Orbits}
+For elliptical orbits, all equations are the same as for circular orbits but the radius of the circle ($r$) is replaced by $r_a$, the semi-major axis (bigger 'radius' of the ellipse).
+
 \end{document}
